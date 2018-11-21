@@ -22,6 +22,12 @@ android {
             versionNameSuffix ".debug"
             resValue "string", "app_version", "${defaultConfig.versionName}${versionNameSuffix}"
         }
+
+        DEV {
+            initWith debug
+            versionNameSuffix ".DEV"
+            resValue "string", "app_version", "${defaultConfig.versionName}${versionNameSuffix}"
+        }
     }
 
     configurations.all {
@@ -50,6 +56,24 @@ dependencies {
     implementation 'com.google.firebase:firebase-ads:15.0.1'
     implementation 'com.android.support:customtabs:28.0.0-alpha1'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+}
+
+def build_param = "${build}";
+
+if (build_param != "DEV") {
+    //exclude production build
+    android.variantFilter { variant ->
+        if (variant.buildType.name.equals('dev')) {
+            variant.setIgnore(true);
+        }
+    }
+} else {
+    //exclude all except production build
+    android.variantFilter { variant ->
+        if (!variant.buildType.name.equals('dev')) {
+            variant.setIgnore(true);
+        }
+    }
 }
 
 apply plugin: 'com.google.gms.google-services'
