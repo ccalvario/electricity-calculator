@@ -1,15 +1,12 @@
 # Electricity Calculator
----
 
-Try It
----
+## Try It
 
 [https://play.google.com/store/apps/details?id=prj.ccalvario.electricitycalculator](https://play.google.com/store/apps/details?id=prj.ccalvario.electricitycalculator)
 
 
 
-Build
----
+## Build
 
 Build with Android Studio. 
 
