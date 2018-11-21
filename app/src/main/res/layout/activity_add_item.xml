@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddItemActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/adview_additem"
+        android:id="@+id/srcollview_additem">
+
+        <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageview_additem_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="36dp"
+                app:layout_constraintEnd_toStartOf="@+id/input_additem_name"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_label" />
+
+            <ImageView
+                android:id="@+id/imageview_additem_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintEnd_toStartOf="@+id/input_additem_days"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageview_additem_watts"
+                app:srcCompat="@drawable/ic_day" />
+
+            <ImageView
+                android:id="@+id/imageview_additem_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintEnd_toStartOf="@+id/input_additem_time"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageview_additem_days"
+                app:srcCompat="@drawable/ic_time" />
+
+            <ImageView
+                android:id="@+id/imageview_additem_watts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintEnd_toStartOf="@+id/input_additem_watts"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageview_additem_quantity"
+                app:srcCompat="@drawable/ic_power" />
+
+            <ImageView
+                android:id="@+id/imageview_additem_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintEnd_toStartOf="@+id/input_additem_quantity"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageview_additem_name"
+                app:srcCompat="@drawable/ic_list" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_additem_name"
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="66dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageview_additem_name"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edittext_additem_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/additem_hint_name"
+                    android:inputType="textPersonName"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_additem_days"
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="66dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageview_additem_days"
+                app:layout_constraintTop_toBottomOf="@+id/input_additem_watts">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edittext_additem_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/additem_hint_days"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_additem_time"
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="66dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageview_additem_time"
+                app:layout_constraintTop_toBottomOf="@+id/input_additem_days">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edittext_additem_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/additem_hint_time"
+                    android:inputType="none"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_additem_watts"
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="66dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageview_additem_watts"
+                app:layout_constraintTop_toBottomOf="@+id/input_additem_quantity">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edittext_additem_watts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/additem_hint_watts"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_additem_quantity"
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="66dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageview_additem_quantity"
+                app:layout_constraintTop_toBottomOf="@+id/input_additem_name">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edittext_additem_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/additem_hint_quantity"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/pick_item"
+                android:layout_width="54dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:layout_constraintStart_toEndOf="@+id/input_additem_name"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageview_pick_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:tint="@color/colorLabelItemText"
+                    app:srcCompat="@drawable/ic_touch" />
+
+                <TextView
+                    android:id="@+id/textview_pick_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/additem_pick_sample"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adview_additem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/additem_ad_unit">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textview_rates_name"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/rates_name"
+            android:textSize="@dimen/main_item_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textview_rates_kwh"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_rates_name_label" />
+
+        <TextView
+            android:id="@+id/textview_rates_cost"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="@dimen/main_item_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textview_rates_kwh"
+            app:layout_constraintTop_toBottomOf="@+id/textview_rates_cost_label" />
+
+        <TextView
+            android:id="@+id/textview_rates_kwh"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="0"
+            android:textSize="@dimen/main_item_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textview_rates_cost"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textview_rates_name"
+            app:layout_constraintTop_toBottomOf="@+id/textview_rates_kwh_label" />
+
+        <TextView
+            android:id="@+id/textview_rates_kwh_label"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/rates_kwh"
+            android:textColor="@color/colorLabelItemText"
+            android:textSize="@dimen/main_item_text_label"
+            app:layout_constraintBottom_toTopOf="@+id/textview_rates_kwh"
+            app:layout_constraintEnd_toStartOf="@+id/textview_rates_cost_label"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textview_rates_name_label"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_rates_cost_label"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rates_cost"
+            android:textColor="@color/colorLabelItemText"
+            android:textSize="@dimen/main_item_text_label"
+            app:layout_constraintBottom_toTopOf="@+id/textview_rates_cost"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textview_rates_kwh_label"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_rates_name_label"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rates_name"
+            android:textColor="@color/colorLabelItemText"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_rates_name"
+            app:layout_constraintEnd_toStartOf="@+id/textview_rates_kwh_label"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

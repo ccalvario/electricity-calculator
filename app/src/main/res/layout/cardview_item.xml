@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/main_list_name"
+            android:textSize="@dimen/main_item_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/item_days"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_rates_name_label" />
+
+        <TextView
+            android:id="@+id/item_watts"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/main_list_watts"
+            android:textSize="@dimen/main_item_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item_time"
+            app:layout_constraintTop_toBottomOf="@+id/textview_watts_label" />
+
+        <TextView
+            android:id="@+id/item_time"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/main_list_time"
+            android:textSize="@dimen/main_item_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/item_watts"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item_days"
+            app:layout_constraintTop_toBottomOf="@+id/textview_time_label" />
+
+        <TextView
+            android:id="@+id/item_days"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/main_list_days"
+            android:textSize="@dimen/main_item_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/item_time"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item_name"
+            app:layout_constraintTop_toBottomOf="@+id/textview_days_label" />
+
+        <TextView
+            android:id="@+id/textview_days_label"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/main_list_days"
+            android:textColor="@color/colorLabelItemText"
+            android:textSize="@dimen/main_item_text_label"
+            app:layout_constraintBottom_toTopOf="@+id/item_days"
+            app:layout_constraintEnd_toStartOf="@+id/textview_time_label"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textview_rates_name_label"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_time_label"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/main_list_time"
+            android:textColor="@color/colorLabelItemText"
+            android:textSize="@dimen/main_item_text_label"
+            app:layout_constraintBottom_toTopOf="@+id/item_time"
+            app:layout_constraintEnd_toStartOf="@+id/textview_watts_label"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textview_days_label"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_watts_label"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/main_list_watts"
+            android:textColor="@color/colorLabelItemText"
+            android:textSize="@dimen/main_item_text_label"
+            app:layout_constraintBottom_toTopOf="@+id/item_watts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textview_time_label"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_rates_name_label"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/main_list_name"
+            android:textColor="@color/colorLabelItemText"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/item_name"
+            app:layout_constraintEnd_toStartOf="@+id/textview_days_label"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/settings_title_general">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/textview_settings_rate_type"
+            android:entries="@array/pref_rate_plan"
+            android:entryValues="@array/pref_rate_plan_values"
+            android:key="@string/key_rate_type"
+            android:summary="Fixed rate"
+            android:title="@string/textview_settings_rate_type" />
+
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberDecimal"
+            android:key="@string/key_fixed_rate"
+            android:numeric="decimal"
+            android:summary="0"
+            android:title="@string/textview_settings_fixed_rate" />
+
+        <Preference
+            android:title="@string/textview_settings_set_rates"
+            android:key="@string/key_set_rates">
+            <intent android:targetPackage="prj.ccalvario.electricitycalculator"
+                android:targetClass="prj.ccalvario.electricitycalculator.RatesActivity"/>
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_title_general">
+        <Preference
+            android:summary="@string/app_version"
+            android:title="@string/settings_about_version" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
