@@ -475,7 +475,10 @@ public class SaveData {
         double consumptionKWh = getConsumption();
 
         if(isFixedRate){
-            String fixedRate = sharedPref.getString(mContext.getString(R.string.key_fixed_rate), "");
+            String fixedRate = sharedPref.getString(mContext.getString(R.string.key_fixed_rate), "0");
+            if(fixedRate == null || fixedRate.isEmpty()) {
+                fixedRate = "0";
+            }
             float rate = Float.parseFloat(fixedRate);
             cost = rate * consumptionKWh;
         } else {
