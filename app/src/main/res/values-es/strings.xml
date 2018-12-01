@@ -19,7 +19,7 @@
     <string name="additem_error_field_empty">Campo requerido</string>
     <string name="additem_error_days">Número debe de ser menos de 30</string>
     <string name="additem_time_picker">Seleccionar tiempo</string>
-    <string name="additem_pick_sample">Seleccionar objeto</string>
+    <string name="additem_pick_sample">Seleccionar\n objeto</string>
     <string name="additem_activity_title">Agregar objeto</string>
     <string name="samples_dialog_title">Seleccionar un objeto</string>
     <string name="chart_others">Otros</string>

@@ -187,9 +187,9 @@
 
             <RelativeLayout
                 android:id="@+id/pick_item"
-                android:layout_width="54dp"
-                android:layout_height="58dp"
-                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
                 android:layout_marginTop="24dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
@@ -210,6 +210,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/imageview_pick_item"
                     android:layout_centerHorizontal="true"
                     android:text="@string/additem_pick_sample"
                     android:textAlignment="center"

@@ -20,7 +20,7 @@
     <string name="additem_time_picker">Select time</string>
     <string name="additem_pick_sample">Select an item</string>
     <string name="additem_activity_title">Add Item</string>
-    <string name="samples_dialog_title">Select an item</string>
+    <string name="samples_dialog_title">Select\n an item</string>
     <string name="chart_others">Others</string>
     <string name="about_author">Developer:</string>
     <string name="about_developer">Cuauhtémoc Calvario</string>

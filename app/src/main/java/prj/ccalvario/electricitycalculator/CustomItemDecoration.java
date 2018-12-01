@@ -11,7 +11,7 @@ public class CustomItemDecoration extends RecyclerView.ItemDecoration {
 
     //private Drawable divider;
     private int mHorizontalSpace = 15;
-    private int mVerticalSpace = 30;
+    private int mVerticalSpace = 15;
 
     /**
      * Default divider will be used

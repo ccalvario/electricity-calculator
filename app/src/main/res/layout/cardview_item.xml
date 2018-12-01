@@ -13,11 +13,12 @@
 
         <TextView
             android:id="@+id/item_name"
-            android:layout_width="120dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
             android:text="@string/main_list_name"
+            android:textAlignment="viewStart"
             android:textSize="@dimen/main_item_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/item_days"
@@ -27,9 +28,9 @@
 
         <TextView
             android:id="@+id/item_watts"
-            android:layout_width="58dp"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:text="@string/main_list_watts"
             android:textSize="@dimen/main_item_text"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -40,9 +41,9 @@
 
         <TextView
             android:id="@+id/item_time"
-            android:layout_width="42dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:text="@string/main_list_time"
             android:textSize="@dimen/main_item_text"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -53,9 +54,9 @@
 
         <TextView
             android:id="@+id/item_days"
-            android:layout_width="40dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:text="@string/main_list_days"
             android:textSize="@dimen/main_item_text"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -66,9 +67,9 @@
 
         <TextView
             android:id="@+id/textview_days_label"
-            android:layout_width="40dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:text="@string/main_list_days"
             android:textColor="@color/colorLabelItemText"
             android:textSize="@dimen/main_item_text_label"
@@ -80,9 +81,9 @@
 
         <TextView
             android:id="@+id/textview_time_label"
-            android:layout_width="42dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:text="@string/main_list_time"
             android:textColor="@color/colorLabelItemText"
             android:textSize="@dimen/main_item_text_label"
@@ -94,9 +95,9 @@
 
         <TextView
             android:id="@+id/textview_watts_label"
-            android:layout_width="58dp"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:text="@string/main_list_watts"
             android:textColor="@color/colorLabelItemText"
             android:textSize="@dimen/main_item_text_label"
@@ -108,7 +109,7 @@
 
         <TextView
             android:id="@+id/textview_rates_name_label"
-            android:layout_width="120dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="@string/main_list_name"
             android:textColor="@color/colorLabelItemText"
