@@ -6,8 +6,8 @@ android {
         applicationId "prj.ccalvario.electricitycalculator"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 100
-        versionName "1.0.0"
+        versionCode 101
+        versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
@@ -63,14 +63,14 @@ def build_param = "${build}";
 if (build_param != "DEV") {
     //exclude production build
     android.variantFilter { variant ->
-        if (variant.buildType.name.equals('dev')) {
+        if (variant.buildType.name.equals('DEV')) {
             variant.setIgnore(true);
         }
     }
 } else {
     //exclude all except production build
     android.variantFilter { variant ->
-        if (!variant.buildType.name.equals('dev')) {
+        if (!variant.buildType.name.equals('DEV')) {
             variant.setIgnore(true);
         }
     }
