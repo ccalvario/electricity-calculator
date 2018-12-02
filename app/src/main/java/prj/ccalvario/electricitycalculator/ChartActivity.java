@@ -86,6 +86,6 @@ public class ChartActivity extends AppCompatActivity {
         pieChart.setData(data);
         pieChart.invalidate(); // refresh
 
-
+        SaveData.getInstance().eventLogOpenChart();
     }
 }

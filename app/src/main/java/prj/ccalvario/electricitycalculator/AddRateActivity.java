@@ -150,6 +150,7 @@ public class AddRateActivity extends AppCompatActivity {
         SaveData.getInstance().saveRate(myRate);
 
         SaveData.getInstance().LogRates();
+        SaveData.getInstance().eventLogSetTieredRate();
 
         mRefreshList = true;
 

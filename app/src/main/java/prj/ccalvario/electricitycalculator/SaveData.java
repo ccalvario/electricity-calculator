@@ -37,6 +37,9 @@ public class SaveData {
     private final String mLogEventEditItem = "edit_item";
     private final String mLogEventDeleteItem = "delete_item";
     private final String mLogEventPickItem = "pick_item";
+    private final String mLogEventSetRate = "myevent_set_rate";
+    private final String mLogEventSetTieredRate = "myevent_set_tiered_rate";
+    private final String mLogEventOpenChart = "myevent_open_chart";
 
     private SaveData() {};
 
@@ -526,12 +529,22 @@ public class SaveData {
         mFirebaseAnalytics.logEvent(mLogEventEditItem, new Bundle());
     }
 
-    public void eventLogDeleteItem(){
-        mFirebaseAnalytics.logEvent(mLogEventDeleteItem, new Bundle());
-    }
+    public void eventLogDeleteItem(){ mFirebaseAnalytics.logEvent(mLogEventDeleteItem, new Bundle()); }
 
     public void eventLogPickItem(){
         mFirebaseAnalytics.logEvent(mLogEventPickItem, new Bundle());
+    }
+
+    public void eventLogSetRate(){
+        mFirebaseAnalytics.logEvent(mLogEventSetRate, new Bundle());
+    }
+
+    public void eventLogOpenChart(){
+        mFirebaseAnalytics.logEvent(mLogEventOpenChart, new Bundle());
+    }
+
+    public void eventLogSetTieredRate(){
+        mFirebaseAnalytics.logEvent(mLogEventSetTieredRate, new Bundle());
     }
 
     class SortByPercentage implements Comparator<Item>

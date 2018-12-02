@@ -75,6 +75,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             if (key.equals(getResources().getString(R.string.key_rate_type))) {
                 String value = sharedPreferences.getString(key, null);
                 Log.d("ccz onSharedPreferenceChanged "+ key + " value " + value);
+                SaveData.getInstance().eventLogSetRate();
                 if(value.equals("1")){
                     getPreferenceScreen().findPreference(getResources().getString(R.string.key_fixed_rate)).setEnabled(false);
                     getPreferenceScreen().findPreference(getResources().getString(R.string.key_set_rates)).setEnabled(true);
@@ -107,7 +108,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             String stringValue = newValue.toString();
-
             if (preference instanceof ListPreference) {
                 // For list preferences, look up the correct display value in
                 // the preference's 'entries' list.
@@ -131,21 +131,4 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             return true;
         }
     };
-
-    public static void sendFeedback(Context context) {
-        String body = null;
-        try {
-            body = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
-            body = "\n\n-----------------------------\nPlease don't remove this information\n Device OS: Android \n Device OS version: " +
-                    Build.VERSION.RELEASE + "\n App Version: " + body + "\n Device Brand: " + Build.BRAND +
-                    "\n Device Model: " + Build.MODEL + "\n Device Manufacturer: " + Build.MANUFACTURER;
-        } catch (PackageManager.NameNotFoundException e) {
-        }
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("message/rfc822");
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"contact@androidhive.info"});
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Query from android app");
-        intent.putExtra(Intent.EXTRA_TEXT, body);
-        //context.startActivity(Intent.createChooser(intent, context.getString(R.string.choose_email_client)));
-    }
 }
