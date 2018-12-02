@@ -71,10 +71,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
                                               String key) {
 
-            Log.d("ccz onSharedPreferenceChanged "+ key);
             if (key.equals(getResources().getString(R.string.key_rate_type))) {
                 String value = sharedPreferences.getString(key, null);
-                Log.d("ccz onSharedPreferenceChanged "+ key + " value " + value);
                 SaveData.getInstance().eventLogSetRate();
                 if(value.equals("1")){
                     getPreferenceScreen().findPreference(getResources().getString(R.string.key_fixed_rate)).setEnabled(false);
@@ -126,7 +124,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 else {
                     preference.setSummary(stringValue);
                 }
-                //Log.d("ccz preference "+ preference.getKey() + " stringValue " + stringValue);
+                //Log.d("preference "+ preference.getKey() + " stringValue " + stringValue);
             }
             return true;
         }

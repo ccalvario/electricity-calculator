@@ -60,7 +60,7 @@ public class SaveData {
             getCost();
 
             //SampleItem item = getSampleItem(1, 1);
-            //Log.d("ccz SampleItem " + item.getName() + " w " + item.getWatts());
+            //Log.d("SampleItem " + item.getName() + " w " + item.getWatts());
         }
         catch (JSONException e) {}
     }
@@ -229,13 +229,13 @@ public class SaveData {
     }
 
     public void LogItems(){
-        Log.d("ccz Logging Items");
+        Log.d("Logging Items");
         int length = mItemList.length();
         try {
             for (int i = 0; i < length; i++) {
                 JSONObject item = mItemList.getJSONObject(i);
                 if(item != null){
-                    Log.d("ccz Item name: "+ item.getString(Item.NAME_KEY)
+                    Log.d("Item name: "+ item.getString(Item.NAME_KEY)
                             + " days: "+ item.getString(Item.DAYS_KEY)
                             + " time: "+ item.getString(Item.TIME_KEY)
                             + " watts: "+ item.getString(Item.WATTS_KEY)
@@ -265,7 +265,7 @@ public class SaveData {
             json = new String(buffer, "UTF-8");
 
         } catch (IOException e) {
-            Log.d("ccz loadJSONFromAsset " + e.getMessage());
+            Log.d("loadJSONFromAsset " + e.getMessage());
             return null;
         }
         return json;
@@ -278,7 +278,7 @@ public class SaveData {
             mSamplesList = new JSONArray(fileStr);
         }
         catch (JSONException e) {
-            Log.d("ccz " + e.getMessage());
+            Log.d("loadSamplesFile " + e.getMessage());
         }
     }
 
@@ -299,7 +299,7 @@ public class SaveData {
 
         }
         catch (JSONException e) {
-            Log.d("ccz getSampleItem " + e.getMessage());
+            Log.d("getSampleItem " + e.getMessage());
         }
         return sItem;
     }
@@ -313,7 +313,7 @@ public class SaveData {
             }
         }
         catch (JSONException e) {
-            Log.d("ccz getCategoryName " + e.getMessage());
+            Log.d("getCategoryName " + e.getMessage());
         }
         return name;
     }
@@ -332,7 +332,7 @@ public class SaveData {
             }
         }
         catch (JSONException e) {
-            Log.d("ccz getLenghtSampleItems " + e.getMessage());
+            Log.d("getLenghtSampleItems " + e.getMessage());
         }
         return length;
     }
@@ -376,7 +376,7 @@ public class SaveData {
             }
         }
         catch (JSONException e) {
-            Log.d("ccz JSONException getRate " + e.getMessage());
+            Log.d("JSONException getRate " + e.getMessage());
             myRate = null;
         }
 
@@ -394,7 +394,7 @@ public class SaveData {
             mRatesList.put(rate);
             saveJSONArray(mPrefNameRates, mKeyRates, mRatesList);
         }
-        catch (JSONException e) { Log.d("ccz JSONException addRate "+ e.getMessage());}
+        catch (JSONException e) { Log.d("JSONException addRate "+ e.getMessage());}
     }
 
     private void editRate(Rate pRate){
@@ -417,7 +417,7 @@ public class SaveData {
             }
             saveJSONArray(mPrefNameRates, mKeyRates, mRatesList);
         }
-        catch (JSONException e) { Log.d("ccz JSONException editRate "+ e.getMessage());}
+        catch (JSONException e) { Log.d("JSONException editRate "+ e.getMessage());}
 
     }
 
@@ -427,7 +427,7 @@ public class SaveData {
             saveJSONArray(mPrefNameRates, mKeyRates, mRatesList);
             mRatesList = loadJSONArray(mPrefNameRates, mKeyRates);
         }
-        catch (JSONException e) { Log.d("ccz JSONException removeRate "+ e.getMessage());}
+        catch (JSONException e) { Log.d("JSONException removeRate "+ e.getMessage());}
     }
 
     public void saveRate(Rate pRate){
@@ -440,20 +440,20 @@ public class SaveData {
     }
 
     public void LogRates(){
-        Log.d("ccz Logging Rates");
+        Log.d("Logging Rates");
         int length = mRatesList.length();
         try {
             for (int i = 0; i < length; i++) {
                 JSONObject rate = mRatesList.getJSONObject(i);
                 if(rate != null){
-                    Log.d("ccz Item name: "+ rate.getString(Rate.NAME_KEY)
+                    Log.d("Item name: "+ rate.getString(Rate.NAME_KEY)
                             + " kwh: "+ rate.getString(Rate.KWH_KEY)
                             + " cost: "+ rate.getString(Rate.COST_KEY)
                             + " index: "+ rate.getString(Rate.INDEX_KEY));
                 }
             }
         }
-        catch (JSONException e) { Log.d("ccz JSONException LogRates "+ e.getMessage());}
+        catch (JSONException e) { Log.d("JSONException LogRates "+ e.getMessage());}
     }
 
     public void removeRate(Rate pRate){
@@ -504,7 +504,7 @@ public class SaveData {
                 }
             }
             if(consumptionKWh > 0){
-                Log.d("ccz Error consumptionKWh " + consumptionKWh);
+                Log.d("Error consumptionKWh " + consumptionKWh);
                 return -1;
             }
         }

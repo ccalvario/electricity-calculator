@@ -27,7 +27,7 @@ public class Item {
             result = temp / (60000);
         }
 
-        //Log.d("ccz Item " + mName + " consumption " + result);
+        //Log.d("Item " + mName + " consumption " + result);
         return result;
     }
 

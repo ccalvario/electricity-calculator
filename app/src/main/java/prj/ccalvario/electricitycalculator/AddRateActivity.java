@@ -61,7 +61,6 @@ public class AddRateActivity extends AppCompatActivity {
             mName = mTextViewTitle.getText() + " " + (ratesList.length + 1);
             mTextViewTitle.setText(mName);
         }
-        Log.d("ccz kwh " + mEditTextKwh + " index " + mIndex + " lasrate " + mIsLastRate);
     }
 
     @Override

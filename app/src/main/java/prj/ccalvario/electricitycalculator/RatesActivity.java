@@ -64,9 +64,8 @@ public class RatesActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.d("ccz onActivityResult resultCode " + resultCode + " requestCode " + requestCode);
+        Log.d("onActivityResult resultCode " + resultCode + " requestCode " + requestCode);
         if (requestCode == REQUEST_REFRESH_CODE && resultCode == RESULT_OK) {
-            Log.d("ccz onActivityResult notifyDataSetChanged");
             mAdapter.setListContent(SaveData.getInstance().getRates());
         }
     }

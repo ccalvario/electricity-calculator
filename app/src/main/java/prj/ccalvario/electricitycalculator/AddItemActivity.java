@@ -68,7 +68,7 @@ public class AddItemActivity extends AppCompatActivity {
                 mEditTextDays.setText(String.valueOf(30));
                 mEditTextQuantity.setText(String.valueOf(1));
             }
-            //Log.d("ccz add item name "+ mName + " watts "+ watts);
+            //Log.d("add item name "+ mName + " watts "+ watts);
         }
 
         if(mPosition != -1){
