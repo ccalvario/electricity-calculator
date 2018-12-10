@@ -53,16 +53,13 @@ public class SaveData {
     public void Init(Context context){
         mContext = context;
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(context);
-        try {
-            mItemList = loadJSONArray(mPrefNameItems, mKeyItems);
-            mRatesList = loadJSONArray(mPrefNameRates, mKeyRates);
-            loadSamplesFile();
-            getCost();
+        mItemList = loadJSONArray(mPrefNameItems, mKeyItems);
+        mRatesList = loadJSONArray(mPrefNameRates, mKeyRates);
+        loadSamplesFile();
+        getCost();
 
-            //SampleItem item = getSampleItem(1, 1);
-            //Log.d("SampleItem " + item.getName() + " w " + item.getWatts());
-        }
-        catch (JSONException e) {}
+        //SampleItem item = getSampleItem(1, 1);
+        //Log.d("SampleItem " + item.getName() + " w " + item.getWatts());
     }
 
     private void saveJSONArray(String prefName, String key, JSONArray array) {
@@ -72,9 +69,15 @@ public class SaveData {
         editor.commit();
     }
 
-    private JSONArray loadJSONArray(String prefName, String key) throws JSONException {
-        SharedPreferences settings = mContext.getSharedPreferences(prefName, 0);
-        return new JSONArray(settings.getString(key, "[]"));
+    private JSONArray loadJSONArray(String prefName, String key) {
+        try {
+            SharedPreferences settings = mContext.getSharedPreferences(prefName, 0);
+            return new JSONArray(settings.getString(key, "[]"));
+        }
+        catch (JSONException e) {
+            Log.d("JSONException loadJSONArray "+ e.getMessage());
+            return new JSONArray();
+        }
     }
 
     public void saveItem(Item pItem){
@@ -87,12 +90,9 @@ public class SaveData {
     }
 
     public void removeItem(int pos){
-        try {
-            mItemList.remove(pos);
-            saveJSONArray(mPrefNameItems, mKeyItems, mItemList);
-            mItemList = loadJSONArray(mPrefNameItems, mKeyItems);
-        }
-        catch (JSONException e) {}
+        mItemList.remove(pos);
+        saveJSONArray(mPrefNameItems, mKeyItems, mItemList);
+        mItemList = loadJSONArray(mPrefNameItems, mKeyItems);
     }
 
     public void removeItem(Item pItem){
@@ -422,12 +422,9 @@ public class SaveData {
     }
 
     public void removeRate(int index){
-        try {
-            mRatesList.remove(index);
-            saveJSONArray(mPrefNameRates, mKeyRates, mRatesList);
-            mRatesList = loadJSONArray(mPrefNameRates, mKeyRates);
-        }
-        catch (JSONException e) { Log.d("JSONException removeRate "+ e.getMessage());}
+        mRatesList.remove(index);
+        saveJSONArray(mPrefNameRates, mKeyRates, mRatesList);
+        mRatesList = loadJSONArray(mPrefNameRates, mKeyRates);
     }
 
     public void saveRate(Rate pRate){
