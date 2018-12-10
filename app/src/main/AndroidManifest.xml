@@ -67,6 +67,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".RatesActivity" />
         </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="ce1ac077a435e8a211848529c59ab7af4413eaf5" />
     </application>
 
 </manifest>

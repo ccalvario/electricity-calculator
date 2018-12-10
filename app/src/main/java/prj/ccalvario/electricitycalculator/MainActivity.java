@@ -22,7 +22,8 @@ import com.google.android.gms.ads.AdView;
 import trikita.log.Log;
 
 import com.google.android.gms.ads.MobileAds;
-
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         if (!BuildConfig.DEBUG) {
