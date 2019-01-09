@@ -30,6 +30,8 @@
     <string name="additem_ad_unit">ca-app-pub-5965660713221392/7560625514</string>
     <string name="chart_ad_unit">ca-app-pub-5965660713221392/3238237120</string>
     <string name="rates_ad_unit">ca-app-pub-5965660713221392/4299015196</string>
+    <string name="chart_interstitial_ad_unit">ca-app-pub-5965660713221392/8752421940</string>
+    <string name="chart_interstitial_ad_unit_test">ca-app-pub-3940256099942544/1033173712</string>
     <string name="main_ad_unit_test">ca-app-pub-3940256099942544/6300978111</string>
 
     <string name="textview_settings_rate_type">Rate type</string>

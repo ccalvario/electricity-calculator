@@ -21,6 +21,7 @@ import com.google.android.gms.ads.AdView;
 
 import trikita.log.Log;
 
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mConsumption;
     private TextView mCost;
     private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
 
     private final String APP_ID_ADMOB = "ca-app-pub-5965660713221392~7374699353";//"ca-app-pub-3940256099942544~3347511713" test
 
@@ -61,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         //AdRequest adRequest = new AdRequest.Builder().addTestDevice("72E598EC1A226E6453D6484D88EFF41B").build();
         mAdView.loadAd(adRequest);
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getResources().getString(R.string.chart_interstitial_ad_unit));
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 
         SaveData.getInstance().Init(this);
@@ -96,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, ChartActivity.class));
+                mInterstitialAd.show();
             }
         });
 
