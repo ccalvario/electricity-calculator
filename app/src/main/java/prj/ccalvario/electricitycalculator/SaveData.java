@@ -471,6 +471,9 @@ public class SaveData {
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(mContext);
         String rateType = sharedPref.getString(mContext.getString(R.string.key_rate_type), "");
+        if(rateType.isEmpty()){
+            return cost;
+        }
         boolean isFixedRate = rateType.equals("0");
         double consumptionKWh = getConsumption();
 
