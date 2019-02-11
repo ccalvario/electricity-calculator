@@ -14,7 +14,7 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5965660713221392~7374699353"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,50 +22,50 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddItemActivity"
+            android:name=".ui.AddItemActivity"
             android:label="@string/additem_activity_title"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".ui.MainActivity"
             android:windowSoftInputMode="adjustPan">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".ui.MainActivity" />
         </activity>
         <activity
-            android:name=".ChartActivity"
-            android:parentActivityName=".MainActivity">
+            android:name=".ui.ChartActivity"
+            android:parentActivityName=".ui.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".ui.MainActivity" />
         </activity>
         <activity
-            android:name=".AboutActivity"
+            android:name=".ui.AboutActivity"
             android:label="@string/about_title"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".ui.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".ui.MainActivity" />
         </activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name=".ui.SettingsActivity"
             android:label="@string/action_settings"/>
         <activity
-            android:name=".RatesActivity"
-            android:parentActivityName=".SettingsActivity"
+            android:name=".ui.RatesActivity"
+            android:parentActivityName=".ui.SettingsActivity"
             android:label="@string/rates_activity_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SettingsActivity" />
+                android:value=".ui.SettingsActivity" />
         </activity>
         <activity
-            android:name=".AddRateActivity"
-            android:parentActivityName=".RatesActivity"
+            android:name=".ui.AddRateActivity"
+            android:parentActivityName=".ui.RatesActivity"
             android:label="@string/addrate_activity_title"
             android:windowSoftInputMode="adjustPan">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".RatesActivity" />
+                android:value=".ui.RatesActivity" />
         </activity>
         <meta-data
             android:name="io.fabric.ApiKey"

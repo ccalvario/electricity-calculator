@@ -1,4 +1,4 @@
-package prj.ccalvario.electricitycalculator;
+package prj.ccalvario.electricitycalculator.adapter;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
+
+import prj.ccalvario.electricitycalculator.R;
 
 public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
 

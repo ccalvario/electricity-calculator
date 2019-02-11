@@ -1,4 +1,4 @@
-package prj.ccalvario.electricitycalculator;
+package prj.ccalvario.electricitycalculator.ui;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

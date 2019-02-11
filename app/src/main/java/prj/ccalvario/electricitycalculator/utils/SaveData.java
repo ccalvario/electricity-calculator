@@ -1,4 +1,4 @@
-package prj.ccalvario.electricitycalculator;
+package prj.ccalvario.electricitycalculator.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -7,6 +7,10 @@ import android.preference.PreferenceManager;
 //import android.util.Log;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
+import prj.ccalvario.electricitycalculator.R;
+import prj.ccalvario.electricitycalculator.model.Item;
+import prj.ccalvario.electricitycalculator.model.Rate;
+import prj.ccalvario.electricitycalculator.model.SampleItem;
 import trikita.log.Log;
 
 import org.json.JSONArray;

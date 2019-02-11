@@ -1,4 +1,4 @@
-package prj.ccalvario.electricitycalculator;
+package prj.ccalvario.electricitycalculator.ui;
 
 import android.app.TimePickerDialog;
 import android.content.Context;
@@ -23,7 +23,13 @@ import com.google.android.gms.ads.AdView;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import trikita.log.Log;
+
+import prj.ccalvario.electricitycalculator.R;
+import prj.ccalvario.electricitycalculator.adapter.CustomExpandableListAdapter;
+import prj.ccalvario.electricitycalculator.model.Item;
+import prj.ccalvario.electricitycalculator.model.SampleItem;
+import prj.ccalvario.electricitycalculator.utils.ExpandableListDataPump;
+import prj.ccalvario.electricitycalculator.utils.SaveData;
 
 public class AddItemActivity extends AppCompatActivity {
 

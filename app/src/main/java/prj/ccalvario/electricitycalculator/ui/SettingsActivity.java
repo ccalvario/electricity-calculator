@@ -1,17 +1,16 @@
-package prj.ccalvario.electricitycalculator;
+package prj.ccalvario.electricitycalculator.ui;
 
-import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 
-import android.view.MenuItem;import trikita.log.Log;
+import android.view.MenuItem;
+
+import prj.ccalvario.electricitycalculator.R;
+import prj.ccalvario.electricitycalculator.utils.SaveData;
 
 public class SettingsActivity extends AppCompatPreferenceActivity {
 

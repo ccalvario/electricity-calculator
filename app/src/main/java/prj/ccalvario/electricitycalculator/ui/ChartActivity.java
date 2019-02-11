@@ -1,4 +1,4 @@
-package prj.ccalvario.electricitycalculator;
+package prj.ccalvario.electricitycalculator.ui;
 
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +16,10 @@ import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import prj.ccalvario.electricitycalculator.R;
+import prj.ccalvario.electricitycalculator.model.Item;
+import prj.ccalvario.electricitycalculator.utils.SaveData;
 
 public class ChartActivity extends AppCompatActivity {
 

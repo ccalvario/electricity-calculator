@@ -1,4 +1,4 @@
-package prj.ccalvario.electricitycalculator;
+package prj.ccalvario.electricitycalculator.adapter;
 
 import android.graphics.Rect;
 //import android.graphics.drawable.Drawable;

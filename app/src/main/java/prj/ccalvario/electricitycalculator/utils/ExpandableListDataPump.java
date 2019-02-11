@@ -1,8 +1,10 @@
-package prj.ccalvario.electricitycalculator;
+package prj.ccalvario.electricitycalculator.utils;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
+
+import prj.ccalvario.electricitycalculator.model.SampleItem;
 
 public class ExpandableListDataPump {
     public static LinkedHashMap<String, List<String>> getData() {

@@ -1,4 +1,4 @@
-package prj.ccalvario.electricitycalculator;
+package prj.ccalvario.electricitycalculator.ui;
 
 
 import android.content.ActivityNotFoundException;
@@ -19,6 +19,12 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import prj.ccalvario.electricitycalculator.BuildConfig;
+import prj.ccalvario.electricitycalculator.R;
+import prj.ccalvario.electricitycalculator.adapter.CustomAdapter;
+import prj.ccalvario.electricitycalculator.adapter.CustomItemClickListener;
+import prj.ccalvario.electricitycalculator.adapter.CustomItemDecoration;
+import prj.ccalvario.electricitycalculator.utils.SaveData;
 import trikita.log.Log;
 
 import com.google.android.gms.ads.InterstitialAd;

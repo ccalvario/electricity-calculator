@@ -1,4 +1,4 @@
-package prj.ccalvario.electricitycalculator;
+package prj.ccalvario.electricitycalculator.ui;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +12,10 @@ import android.view.View;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import prj.ccalvario.electricitycalculator.R;
+import prj.ccalvario.electricitycalculator.adapter.CustomItemClickListener;
+import prj.ccalvario.electricitycalculator.adapter.RateAdapter;
+import prj.ccalvario.electricitycalculator.utils.SaveData;
 import trikita.log.Log;
 
 public class RatesActivity extends AppCompatActivity {
