@@ -79,4 +79,8 @@
     <string name="samples_tv_32">TV x LED 32</string>
     <string name="samples_tv_50">TV x LED 50</string>
     <string name="samples_laptop">Laptop</string>
+    <string name="settings_title_rates">Tarifas</string>
+
+    <string name="info_set_rates">Agregue las tarifas en el menú Configuración para ver un aproximado de cuánto pagará.</string>
+    <string name="info_set_rates_dialog_title">Info</string>
 </resources>

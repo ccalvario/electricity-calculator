@@ -89,4 +89,7 @@
     <string name="samples_desktop_computer">Desktop Computer</string>
     <string name="samples_gaming_computer">Gaming Computer</string>
     <string name="samples_laptop">Laptop</string>
+
+    <string name="info_set_rates_dialog_title">Info</string>
+    <string name="info_set_rates">Set rates in Settings menu to see an approximate of how much you will pay.</string>
 </resources>

@@ -45,6 +45,10 @@ public class SaveData {
     private final String mLogEventSetTieredRate = "myevent_set_tiered_rate";
     private final String mLogEventOpenChart = "myevent_open_chart";
 
+    public static final int ERROR_NO_RATE_SET = -1;
+    public static final int ERROR_RATE_INVALID = -2;
+
+
     private SaveData() {};
 
     public static SaveData getInstance() {
@@ -463,8 +467,8 @@ public class SaveData {
 
     public String getCostStr(){
         double cost = getCost();
-        if(cost == -1){
-            return "$ Error";
+        if(cost == ERROR_RATE_INVALID || cost == ERROR_NO_RATE_SET){
+            return "$ 0";
         } else {
             return "$ " + String.format("%1$,.2f", cost);
         }
@@ -476,7 +480,7 @@ public class SaveData {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(mContext);
         String rateType = sharedPref.getString(mContext.getString(R.string.key_rate_type), "");
         if(rateType.isEmpty()){
-            return cost;
+            return ERROR_NO_RATE_SET;
         }
         boolean isFixedRate = rateType.equals("0");
         double consumptionKWh = getConsumption();
@@ -487,6 +491,9 @@ public class SaveData {
                 fixedRate = "0";
             }
             float rate = Float.parseFloat(fixedRate);
+            if(rate == 0) {
+                return ERROR_NO_RATE_SET;
+            }
             cost = rate * consumptionKWh;
         } else {
             Rate[] rates = getRates();
@@ -495,7 +502,7 @@ public class SaveData {
                 double kWh = 0;
 
                 if(myRate.getKwh() == -1 && (rates.length -1 != myRate.getIndex())){
-                    return -1;
+                    return ERROR_NO_RATE_SET;
                 } else if(myRate.getKwh() == -1){
                     kWh = consumptionKWh;
                 } else{
@@ -509,7 +516,7 @@ public class SaveData {
             }
             if(consumptionKWh > 0){
                 Log.d("Error consumptionKWh " + consumptionKWh);
-                return -1;
+                return ERROR_RATE_INVALID;
             }
         }
 

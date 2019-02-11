@@ -49,13 +49,13 @@
 
             <TextView
                 android:id="@+id/textview_main_details"
+                style="@style/TextAppearance.AppCompat.Caption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="@string/main_details"
-                style="@style/TextAppearance.AppCompat.Caption"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView" />
+                app:layout_constraintEnd_toStartOf="@+id/imageView_details" />
 
             <TextView
                 android:id="@+id/textview_main_consumption"
@@ -86,22 +86,39 @@
                 android:id="@+id/textview_main_cost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="$ 0"
                 android:textColor="@android:color/black"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton_info"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textview_main_consumption" />
 
+            <ImageButton
+                android:id="@+id/imageButton_info"
+                style="@style/RoundedButtonLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textview_main_cost"
+                app:layout_constraintTop_toBottomOf="@+id/textview_main_consumption"
+                app:srcCompat="@drawable/ic_info" />
+
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageView_details"
                 style="@style/AppTheme.Icons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
                 android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:srcCompat="@drawable/ic_next" />

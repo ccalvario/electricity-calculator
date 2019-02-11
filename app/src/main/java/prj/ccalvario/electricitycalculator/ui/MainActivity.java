@@ -2,7 +2,9 @@ package prj.ccalvario.electricitycalculator.ui;
 
 
 import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -14,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayoutManager mLayoutManager;
     private TextView mConsumption;
     private TextView mCost;
+    private ImageButton mInfo;
     private AdView mAdView;
     private InterstitialAd mInterstitialAd;
 
@@ -77,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         SaveData.getInstance().Init(this);
         SaveData.getInstance().LogItems();
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.main_list_items);
+        mRecyclerView = findViewById(R.id.main_list_items);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
@@ -95,11 +99,34 @@ public class MainActivity extends AppCompatActivity {
 
         CustomItemDecoration myItemDecoration = new CustomItemDecoration();
         mRecyclerView.addItemDecoration(myItemDecoration);
-        mConsumption = (TextView) findViewById(R.id.textview_main_consumption);
+        mConsumption = findViewById(R.id.textview_main_consumption);
         mConsumption.setText(SaveData.getInstance().getConsumptionStr());
 
-        mCost = (TextView) findViewById(R.id.textview_main_cost);
+        mCost = findViewById(R.id.textview_main_cost);
         mCost.setText(SaveData.getInstance().getCostStr());
+
+        mInfo = findViewById(R.id.imageButton_info);
+        mInfo.setVisibility(View.GONE);
+        double cost = SaveData.getInstance().getCost();
+        if(cost == SaveData.ERROR_NO_RATE_SET || cost == SaveData.ERROR_RATE_INVALID) {
+            mInfo.setVisibility(View.VISIBLE);
+        }
+        mInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //dialog
+                AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                alertDialog.setTitle(getResources().getString(R.string.info_set_rates_dialog_title));
+                alertDialog.setMessage(getResources().getString(R.string.info_set_rates));
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+        });
 
 
         CardView myCardView = findViewById(R.id.cardview_main);
@@ -153,6 +180,12 @@ public class MainActivity extends AppCompatActivity {
         }
         mConsumption.setText(SaveData.getInstance().getConsumptionStr());
         mCost.setText(SaveData.getInstance().getCostStr());
+        double cost = SaveData.getInstance().getCost();
+        if(cost == SaveData.ERROR_NO_RATE_SET || cost == SaveData.ERROR_RATE_INVALID) {
+            mInfo.setVisibility(View.VISIBLE);
+        } else {
+            mInfo.setVisibility(View.GONE);
+        }
     }
 
     private void OpenRateApp(){

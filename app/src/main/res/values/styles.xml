@@ -18,4 +18,9 @@
 
     <style name="TextAppearanceTextList" parent="TextAppearance.AppCompat.Menu">
     </style>
+
+    <style name="RoundedButtonLight">
+        <item name="android:background">@drawable/bg_rounded_button</item>
+        <item name="android:tint">?attr/colorControlNormal</item>
+    </style>
 </resources>

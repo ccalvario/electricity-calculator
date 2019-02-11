@@ -8,7 +8,5 @@
     <color name="colorSecondaryAccent">#69e2ff</color>
 
     <color name="colorPrimaryText">#FFFFFF</color>
-    <color name="colorSecondaryText">#000000</color>
-    <color name="colorLabelItemText">#bdbdbd</color>
 
 </resources>
