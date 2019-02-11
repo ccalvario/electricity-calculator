@@ -53,6 +53,7 @@
     <string name="key_fixed_rate">key_fixed_rate</string>
     <string name="key_set_rates">key_set_rates</string>
 
+    <string name="settings_title_rates">Rates</string>
     <string name="settings_title_general">General</string>
     <string name="settings_title_about">About</string>
     <string name="settings_about_version">Version</string>
