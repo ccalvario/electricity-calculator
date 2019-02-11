@@ -6,8 +6,8 @@ android {
         applicationId "prj.ccalvario.electricitycalculator"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 103
-        versionName "1.0.3"
+        versionCode 104
+        versionName "1.0.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
