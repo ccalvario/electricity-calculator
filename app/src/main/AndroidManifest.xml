@@ -13,12 +13,13 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5965660713221392~7374699353"/>
+            android:value="ca-app-pub-5965660713221392~7374699353" />
+
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
         <activity
@@ -26,8 +27,6 @@
             android:label="@string/additem_activity_title"
             android:parentActivityName=".ui.MainActivity"
             android:windowSoftInputMode="adjustPan">
-
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
@@ -49,24 +48,32 @@
         </activity>
         <activity
             android:name=".ui.SettingsActivity"
-            android:label="@string/action_settings"/>
+            android:label="@string/action_settings" />
         <activity
             android:name=".ui.RatesActivity"
-            android:parentActivityName=".ui.SettingsActivity"
-            android:label="@string/rates_activity_title">
+            android:label="@string/rates_activity_title"
+            android:parentActivityName=".ui.SettingsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SettingsActivity" />
         </activity>
         <activity
             android:name=".ui.AddRateActivity"
-            android:parentActivityName=".ui.RatesActivity"
             android:label="@string/addrate_activity_title"
+            android:parentActivityName=".ui.RatesActivity"
             android:windowSoftInputMode="adjustPan">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.RatesActivity" />
         </activity>
+        <activity android:name=".ui.PrivacyActivity"
+            android:label="@string/privacy_activity_title"
+            android:parentActivityName=".ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="ce1ac077a435e8a211848529c59ab7af4413eaf5" />

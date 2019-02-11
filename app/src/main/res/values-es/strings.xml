@@ -2,8 +2,11 @@
 <resources>
     <string name="app_name">Consumo Eléctrico</string>
     <string name="action_settings">Configuración</string>
+    <string name="action_privacy">Política de Privacidad</string>
     <string name="action_about">Acerca de</string>
     <string name="action_rateapp">Calificar aplicación</string>
+    <string name="privacy_activity_title">Política de Privacidad</string>
+
     <string name="main_consumption">Consumo Eléctrico</string>
     <string name="main_details">Detalles</string>
     <string name="main_list_name">Nombre</string>

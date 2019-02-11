@@ -162,6 +162,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_rateapp:
                 OpenRateApp();
                 return true;
+            case R.id.action_privacy:
+                startActivity(new Intent(MainActivity.this, PrivacyActivity.class));
+                return true;
 
             default:
                 // If we got here, the user's action was not recognized.

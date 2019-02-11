@@ -6,6 +6,9 @@
         android:id="@+id/action_settings"
         android:title="@string/action_settings" />
     <item
+        android:id="@+id/action_privacy"
+        android:title="@string/action_privacy" />
+    <item
         android:id="@+id/action_rateapp"
         android:title="@string/action_rateapp" />
 </menu>
