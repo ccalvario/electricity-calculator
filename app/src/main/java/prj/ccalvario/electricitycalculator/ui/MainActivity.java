@@ -33,6 +33,8 @@ import trikita.log.Log;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.crashlytics.android.Crashlytics;
+import com.kobakei.ratethisapp.RateThisApp;
+
 import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity {
@@ -59,6 +61,12 @@ public class MainActivity extends AppCompatActivity {
         if (!BuildConfig.DEBUG) {
             Log.usePrinter(Log.ANDROID, false); // from now on Log.d etc do nothing and is likely to be optimized with JIT
         }
+
+        RateThisApp.onCreate(this);
+        RateThisApp.Config config = new RateThisApp.Config(2, 5);
+
+        RateThisApp.init(config);
+        RateThisApp.showRateDialogIfNeeded(this);
 
         FloatingActionButton addItem = findViewById(R.id.add_item);
         addItem.setOnClickListener(new View.OnClickListener() {
