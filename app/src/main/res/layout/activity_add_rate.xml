@@ -24,12 +24,13 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/addrate_title"
-                android:textSize="18sp"
+                style="@style/TextAppearance.AppCompat.Title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textview_addrate_kwh_label"
+                style="@style/TextAppearance.AppCompat.Menu"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -40,6 +41,7 @@
 
             <TextView
                 android:id="@+id/textview_addrate_cost_label"
+                style="@style/TextAppearance.AppCompat.Menu"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -87,8 +89,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:text="@string/addrate_help"
-                android:textColor="@color/colorLabelItemText"
-                android:textSize="14sp"
+                style="@style/TextAppearance.AppCompat.Caption"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textview_addrate_cost_label" />
         </android.support.constraint.ConstraintLayout>

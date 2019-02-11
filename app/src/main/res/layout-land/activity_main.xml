@@ -97,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:layout_marginEnd="4dp"
-                android:tint="@color/colorLabelItemText"
+                style="@style/AppTheme.Icons"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:srcCompat="@drawable/ic_next" />
@@ -108,8 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="@string/main_details"
-                android:textColor="@color/colorLabelItemText"
-                android:textSize="14sp"
+                style="@style/TextAppearance.AppCompat.Caption"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView" />
 

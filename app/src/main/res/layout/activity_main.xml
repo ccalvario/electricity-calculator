@@ -53,8 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="@string/main_details"
-                android:textColor="@color/colorLabelItemText"
-                android:textSize="14sp"
+                style="@style/TextAppearance.AppCompat.Caption"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView" />
 
@@ -98,11 +97,11 @@
 
             <ImageView
                 android:id="@+id/imageView"
+                style="@style/AppTheme.Icons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:layout_marginEnd="4dp"
-                android:tint="@color/colorLabelItemText"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:srcCompat="@drawable/ic_next" />
