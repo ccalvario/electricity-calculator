@@ -23,7 +23,7 @@
             android:title="@string/textview_settings_set_rates"
             android:key="@string/key_set_rates">
             <intent android:targetPackage="prj.ccalvario.electricitycalculator"
-                android:targetClass="prj.ccalvario.electricitycalculator.RatesActivity"/>
+                android:targetClass="prj.ccalvario.electricitycalculator.ui.RatesActivity"/>
         </Preference>
     </PreferenceCategory>
 
