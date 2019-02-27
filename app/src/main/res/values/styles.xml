@@ -5,7 +5,6 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="floatingActionButtonStyle">@style/Widget.Design.FloatingActionButton</item>
-        <item name="cardViewStyle">@style/CardView</item>
         <item name="textInputStyle">@style/Widget.Design.TextInputLayout</item>
     </style>
 
@@ -20,7 +19,7 @@
     </style>
 
     <style name="RoundedButtonLight">
-        <item name="android:background">@drawable/bg_rounded_button</item>
+        <item name="android:background">@android:color/transparent</item>
         <item name="android:tint">?attr/colorControlNormal</item>
     </style>
 </resources>
