@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import prj.ccalvario.electricitycalculator.BuildConfig;
 import prj.ccalvario.electricitycalculator.R;
 import prj.ccalvario.electricitycalculator.model.Rate;
 import prj.ccalvario.electricitycalculator.utils.SaveData;
@@ -149,7 +150,9 @@ public class AddRateActivity extends AppCompatActivity {
         myRate.setIndex(mIndex);
         SaveData.getInstance().saveRate(myRate);
 
-        SaveData.getInstance().LogRates();
+        if (BuildConfig.DEBUG) {
+            SaveData.getInstance().LogRates();
+        }
         SaveData.getInstance().eventLogSetTieredRate();
 
         mRefreshList = true;
